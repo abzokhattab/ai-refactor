@@ -1,0 +1,135 @@
+{
+  "name": "ai-refactor",
+  "displayName": "ai-refactor",
+  "description": "",
+  "publisher": "abzokhattab",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Refactoring Extension Configuration",
+      "properties": {
+        "generalRefactor.prompt": {
+          "type": "string",
+          "default": "Refactor the following code without introducing breaking changes:",
+          "description": "The prompt used for general refactoring."
+        },
+        "extractMethod.prompt": {
+          "type": "string",
+          "default": "Extract methods from the following code without introducing breaking changes:",
+          "description": "The prompt used for extracting methods."
+        },
+        "renameVariable.prompt": {
+          "type": "string",
+          "default": "Rename variables in the following code for better clarity without introducing breaking changes:",
+          "description": "The prompt used for renaming variables."
+        },
+        "simplifyCode.prompt": {
+          "type": "string",
+          "default": "Simplify the following code without introducing breaking changes",
+          "description": "The prompt used for simplifying code."
+        },
+        "installDependenciesCommand": {
+          "type": "string",
+          "default": "npm install",
+          "description": "The command to install dependencies before running tests."
+        },
+        "runTestsCommand": {
+          "type": "string",
+          "default": "npm test",
+          "description": "The command to run tests."
+        },
+        "maxRefactoringAttempts": {
+          "type": "number",
+          "default": 5,
+          "description": "The maximum number of refactoring attempts."
+        },
+        "disableTestsCheck": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disable the check for tests after refactoring."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "ai-refactor.generalRefactor",
+        "title": "General Refactoring"
+      },
+      {
+        "command": "ai-refactor.extractMethod",
+        "title": "Extract Method"
+      },
+      {
+        "command": "ai-refactor.RenameVariable",
+        "title": "Rename Variables"
+      },
+      {
+        "command": "ai-refactor.SimplifyCode",
+        "title": "Simplify Code"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "ai-refactor.generalRefactor",
+          "group": "Code Refactor"
+        },
+        {
+          "command": "ai-refactor.extractMethod",
+          "group": "Code Refactor"
+        },
+        {
+          "command": "ai-refactor.RenameVariable",
+          "group": "Code Refactor"
+        },
+        {
+          "command": "ai-refactor.SimplifyCode",
+          "group": "Code Refactor"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "evaluate": "ts-node ./src/evaluation/evaluateModels.ts",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.6",
+    "@types/markdown-it": "^14.1.1",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.14.10",
+    "@types/vscode": "^1.90.0",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.0",
+    "axios": "^1.7.2",
+    "chi-squared": "^1.1.0",
+    "lodash": "^4.17.21",
+    "markdown-it": "^14.1.0",
+    "marked": "^13.0.1",
+    "node-fetch": "^3.3.2",
+    "unist-util-visit": "^5.0.0",
+    "uuidv4": "^6.2.13"
+  }
+}
