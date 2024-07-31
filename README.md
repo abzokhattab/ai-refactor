@@ -110,7 +110,7 @@ these commands are accessible from the context menu in the editor:
 
 ### POC Video
 
-https://github.com/abzokhattab/ai-refactor/blob/main/media/POC.mov?raw=true
+<video src="https://github.com/abzokhattab/ai-refactor/blob/main/media/POC.mov?raw=true" width=180/>
 
 ## License
 
