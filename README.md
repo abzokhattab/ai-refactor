@@ -105,11 +105,11 @@ these commands are accessible from the context menu in the editor:
 ### Example
 
 **Context menu:**
-![New actions inside the context menu](/images/context-menu.png)
+![New actions inside the context menu](https://github.com/abzokhattab/ai-refactor/blob/main/images/context-menu.png?raw=true)
 
 **Output:**
 
-![Model output](/images/output.png)
+![Model output](https://github.com/abzokhattab/ai-refactor/blob/main/images/output.png?raw=true)
 
 ## License
 
