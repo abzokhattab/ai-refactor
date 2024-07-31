@@ -1,6 +1,6 @@
-### README for AI Refactor Extension
-
 # AI Refactor
+
+**Tool URL on Visual Studio Code Marketplace**: [AI Refactor Extension](https://marketplace.visualstudio.com/items?itemName=AbdelrahmanKhattab.ai-refactor)
 
 AI Refactor is a Visual Studio Code extension designed to enhance developer productivity by providing automated code refactoring capabilities. Leveraging the Gemma-7b-it model, this extension helps developers perform complex code refactorings efficiently while maintaining code integrity through integrated testing.
 
@@ -31,25 +31,25 @@ git clone https://github.com/yourusername/ai-refactor.git
 cd ai-refactor
 ```
 
-2. **Install dependencies** :
+1. **Install dependencies** :
 
 ```sh
 npm install
 ```
 
-3. **Build the extension** :
+1. **Build the extension** :
 
 ```sh
 npm run compile
 ```
 
-4. **Open the project in Visual Studio Code** :
+1. **Open the project in Visual Studio Code** :
 
 ```sh
 code .
 ```
 
-5. **Run the extension** :
+1. **Run the extension** :
 
 - Press `F5` to open a new VS Code window with the extension loaded.
 
@@ -105,11 +105,12 @@ these commands are accessible from the context menu in the editor:
 ### Example
 
 **Context menu:**
-![New actions inside the context menu](https://github.com/abzokhattab/ai-refactor/blob/main/images/context-menu.png?raw=true)
+![New actions inside the context menu](https://github.com/abzokhattab/ai-refactor/blob/main/media/context-menu.png?raw=true)
+**Output:** ![Model output](https://github.com/abzokhattab/ai-refactor/blob/main/media/output.png?raw=true)
 
-**Output:**
+### POC Video
 
-![Model output](https://github.com/abzokhattab/ai-refactor/blob/main/images/output.png?raw=true)
+https://github.com/abzokhattab/ai-refactor/blob/main/media/POC.mov?raw=true
 
 ## License
 
