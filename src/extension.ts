@@ -138,9 +138,10 @@ async function tryRefactor(
         const testError = await runsTestsSuccessfully(
           newFileContent,
           filePath,
-          installDependenciesCommand,
-          runTestsCommand
+          runTestsCommand,
+          installDependenciesCommand
         );
+
         if (testError === true) {
           return extractedBlocks;
         }

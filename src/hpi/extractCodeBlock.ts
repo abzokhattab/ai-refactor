@@ -1,6 +1,4 @@
 export function extractCodeBlocks(input: string): string | null {
-  let codeBlock = null;
-
   // Iterate through the sections to find the last code block
   const codeBlockMatch = input.match(/```[\s\S]*?```/);
 

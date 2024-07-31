@@ -62,11 +62,11 @@ export async function runsTestsSuccessfully(
           fs.writeFileSync(filePath, originalCode);
 
           if (execErr) {
-            // console.log("Tests failed!");
+            console.log("Tests failed!");
             // Only return the first 300 characters of the error message
             resolve(execErr.toString().substring(0, 300));
           } else {
-            // console.log("Tests passed!");
+            console.log("Tests passed!");
             resolve(true);
           }
         }
